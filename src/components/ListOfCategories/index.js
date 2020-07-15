@@ -9,7 +9,7 @@ function useCategoriesData () {
 
   useEffect(function () {
     setLoading(true)
-    window.fetch('https://dgotv2-server.vercel.app/categories') // no es la url
+    window.fetch('https://dgotv2-server.vercel.app/categories')
       .then(res => res.json())
       .then(response => {
         setCategories(response)
@@ -30,7 +30,7 @@ export const ListOfCategories = () => {
     }
 
     document.addEventListener('scroll', onScroll)
-    return () => document.removeEventListener('scroll0', onScroll)
+    return () => document.removeEventListener('scroll', onScroll)
   }, [showFixed])
 
   const renderList = (fixed) => (

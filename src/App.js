@@ -28,11 +28,11 @@ export const App = () => {
               ? <Router>
                 <Favs path='/favs' />
                 <User path='/user' />
-              </Router>
+                </Router>
               : <Router>
                 <NotRegisteredUser path='favs' />
                 <NotRegisteredUser path='user' />
-              </Router>
+                </Router>
         }
       </Context.Consumer>
       <NavBar />
