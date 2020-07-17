@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Category } from '../Category'
 import { List, Item } from './styles'
-// import { categories as mockCategories } from '../../../api/db.json'
 
 function useCategoriesData () {
   const [categories, setCategories] = useState([])
@@ -19,7 +18,7 @@ function useCategoriesData () {
 
   return { categories, loading }
 }
-export const ListOfCategories = () => {
+const ListOfCategoriesComponent = () => {
   const { categories, loading } = useCategoriesData()
   const [showFixed, setShowFixed] = useState(false)
 
@@ -52,3 +51,5 @@ export const ListOfCategories = () => {
     </>
   )
 }
+
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)
